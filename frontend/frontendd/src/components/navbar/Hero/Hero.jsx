@@ -1,5 +1,8 @@
 import React from 'react';
 import './Hero.css';
+import hand_icon from '../../Assets/hand_icon.png';
+import arrow_icon from '../../Assets/arrow.png';
+import hero_image from '../../Assets/hero_image.png';
 
 const Hero = () => {
   return (
@@ -9,18 +12,18 @@ const Hero = () => {
         <div>
           <div className="hand-icon">
             <p>new</p>
-            <img src="/Frontend_Assets/hand_icon.png" alt="Hand icon"/>
+            <img src={hand_icon} alt="Hand icon"/>
           </div>
           <p>Collections</p>
           <p>For everyone</p>
         </div>
         <div className="hero-latest-btn">
           <div>Latest Collection</div>
-          <img src="/Frontend_Assets/arrow.png" alt="Arrow icon"/>
+          <img src={arrow_icon} alt="Arrow icon"/>
         </div>
       </div>
       <div className="hero-right">
-        <img src="/Frontend_Assets/hero_image.png" alt="Hero"/>
+        <img src={hero_image} alt="Hero"/>
       </div>
     </div>
   );

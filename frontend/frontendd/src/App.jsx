@@ -7,12 +7,13 @@ import ShopCategory from './pages/ShopCategory';
 import Product from './pages/Product';
 import Cart from './pages/Cart.jsx';
 import LoginSignup from './pages/LoginSignup';
-
+import Hero from './components/navbar/Hero/Hero.jsx';
 function App() {
   return (
     <>
       <BrowserRouter>
         <Navbar />
+        <Hero/>
         <Routes>
           <Route path='/' element={<Shop />} />
           <Route path='/mens' element={<ShopCategory category="mens" />} />
