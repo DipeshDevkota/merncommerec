@@ -1,6 +1,5 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Shop from './pages/Shop';
 import Navbar from './components/navbar/Navbar';
 import ShopCategory from './pages/ShopCategory';
@@ -13,30 +12,31 @@ import men_banner from './components/Assets/banner_mens.png';
 import women_banner from './components/Assets/banner_women.png';
 import kid_banner from './components/Assets/banner_kids.png';
 
-function App() {
+const App = () => {
   return (
     <>
       <BrowserRouter>
         <Navbar />
-    <Hero/>
-
-
+        <ConditionalHero />
         <Routes>
           <Route path='/' element={<Shop />} />
-          <Route path='/mens' element={<ShopCategory  banner={men_banner}category="mens" />} />
-          <Route path='/womens' element={<ShopCategory banner={women_banner}category="womens" />} />
+          <Route path='/mens' element={<ShopCategory banner={men_banner} category="mens" />} />
+          <Route path='/womens' element={<ShopCategory banner={women_banner} category="womens" />} />
           <Route path='/kids' element={<ShopCategory banner={kid_banner} category="kids" />} />
           <Route path='/product/:productId' element={<Product />} />
           <Route path='/cart' element={<Cart />} />
-          <Route path='/login' element={<LoginSignup  />} />
-
-          
+          <Route path='/login' element={<LoginSignup />} />
         </Routes>
-
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </>
   );
-}
+};
+
+const ConditionalHero = () => {
+  const location = useLocation();
+  const showHero = location.pathname === '/';
+  return showHero ? <Hero /> : null;
+};
 
 export default App;

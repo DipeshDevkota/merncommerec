@@ -25,3 +25,14 @@
     transform: scale(1.05);
     transition: 0.6s;
 }
+.item {
+    width: 100%;
+    max-width: 350px;
+}
+
+@media (max-width: 768px) {
+    .item {
+        width: 100%;
+        max-width: 250px;
+    }
+}
