@@ -1,4 +1,3 @@
-// ShopCategory.js
 import React, { useContext } from 'react';
 import './CSS/ShopCategory.css';
 import { ShopContext } from '../Context/ShopContext';
@@ -9,11 +8,13 @@ const ShopCategory = (props) => {
     const { all_product } = useContext(ShopContext);
 
     // Log the entire all_product array
-    console.log('All Products:', all_product);
+    console.log('All props:', props);
+    
 
     return (
         <div className='shop-category'>
             <img className='shopcategory-banner' src={props.banner} alt="" />
+            {console.log("Props=", props.banner)}
             <div className="shopcategory-indexSort">
                 <p>
                     <span>Showing 1-12 </span> out of 36 products
@@ -26,24 +27,29 @@ const ShopCategory = (props) => {
                 {all_product && all_product.length > 0 ? (
                     all_product.map((item) => {
                         // Log each item to inspect its properties
-                        console.log('Product Item:', item);
+                        // console.log('Product Item:', item);
 
-                        // Log the category being checked
-                        console.log('Checking Category:', props.category, 'Product Category:', item.category);
+                        // // Log the category being checked
+                        // console.log('Checking Category:', props.category, 'Product Category:', item.category);
+                          console.log(props.category.trim().toLowerCase()==item.category.trim().toLowerCase());
+                        if(props.category.trim().toLowerCase() === item.category.trim().toLowerCase())
+                             {
+                            
+                            console.log(item.image);
+                            
 
-                        if (props.category.trim().toLowerCase() === item.category.trim().toLowerCase()) {
-                          return (
-                              <Item
-                                  key={item.id}
-                                  id={item.id}
-                                  name={item.name}
-                                  image={item.image}
-                                  new_price={item.new_price}
-                                  old_price={item.old_price}
-                              />
-                          );
-                      }
-                        return null;
+                            return (
+                                <Item
+                                    key={item.id}
+                                    id={item.id}
+                                    name={item.name}
+                                    image={item.image}
+                                    new_price={item.new_price}
+                                    old_price={item.old_price}
+                                />
+                            );
+                        }
+                    return null;
                     })
                 ) : (
                     <p>No products available.</p>
