@@ -3,9 +3,11 @@ import './Navbar.css'
 import logo from '../Assets/logo.png'
 import cart_icon from '../Assets/cart_icon.png'
 import { Link } from 'react-router-dom'
+import Hero from './Hero/Hero'
 const Navbar = () => {
     const [menu,setMenu]= useState("shop")
   return (
+    <>
     <div className='navbar'>
       <div className="nav-logo">
         <img src={logo} alt=""/>
@@ -24,6 +26,7 @@ const Navbar = () => {
             <div className="nav-cart-count">0</div>
         </div>
     </div>
+    </>
   )
 }
 
