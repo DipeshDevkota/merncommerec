@@ -1,38 +1,63 @@
-.item{
-    width:350px;
+/* Base Styles */
+.item {
+    width: 100%;
+    max-width: 350px; /* Default maximum width for larger screens */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    margin: auto; /* Centers the item card */
 }
-.item p{
+
+.item img {
+    width: 100%; /* Ensures image scales with the item card width */
+    height: auto; /* Maintains aspect ratio of the image */
+}
+
+.item p {
     margin: 6px 0px;
+    text-align: center; /* Center-aligns the product name */
 }
-.item-prices{
+
+.item-prices {
     display: flex;
-    gap:20px;
+    justify-content: center; /* Centers the price elements */
+    gap: 20px;
+    margin-top: 10px;
 }
-.item-price-new
-{
-   color:#374151;
-   font-size: 18px;
-   font-weight: 600;
+
+.item-price-new {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
 }
-.item-price-old
-{
-    color:#8c8c8c;
+
+.item-price-old {
+    color: #8c8c8c;
     font-size: 18px;
     font-weight: 500;
     text-decoration: line-through;
 }
-.item:hover{
+
+.item:hover {
     transform: scale(1.05);
     transition: 0.6s;
 }
-.item {
-    width: 100%;
-    max-width: 350px;
-}
 
+/* Media Queries for Responsiveness */
+
+/* Medium Devices (768px and down) */
 @media (max-width: 768px) {
     .item {
-        width: 100%;
-        max-width: 250px;
+        max-width: 250px; /* Reduced max-width for smaller screens */
     }
 }
+
+/* Small Devices (480px and down) */
+@media (max-width: 480px) {
+    .item {
+        max-width: 100%; /* Full width for very small screens */
+    }
+    
+    .item-prices {
+        flex-direction: column; /* Stack prices vertically on very small screens */
+        gap: 10px;
+    }
+} 

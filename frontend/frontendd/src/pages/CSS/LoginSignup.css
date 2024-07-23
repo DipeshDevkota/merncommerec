@@ -1,62 +1,130 @@
-.loginsignup{
+/* Base Styles */
+.loginsignup {
     width: 100%;
-    height: 80vh;
+    height: auto; /* Adjusted height to be flexible */
     background: #fce3fe;
-    padding-top: 100px;
-    margin-bottom: 25vw;
+    padding-top: 60px; /* Reduced padding for smaller screens */
+    padding-bottom: 30px; /* Added bottom padding */
+    margin-bottom: 25vw; /* Adjusted margin-bottom */
 }
-.loginsignup-container{
-    width: 580px;
-    height:600px;
+
+.loginsignup-container {
+    width: 90%; /* Adjusted width to be more flexible */
+    max-width: 580px; /* Ensured max-width for larger screens */
+    height: auto; /* Adjusted height to be flexible */
     background: white;
     margin: auto;
-    padding: 40px 60px;
+    padding: 20px; /* Reduced padding for smaller screens */
 }
-.loginsignup-container h1{
-    margin: 20px 0px;
+
+.loginsignup-container h1 {
+    margin: 20px 0;
+    font-size: 28px; /* Adjusted font size */
 }
-.loginsignup-fields{
+
+.loginsignup-fields {
     display: flex;
     flex-direction: column;
-    gap: 29px;
-    margin-top: 30px;
+    gap: 20px; /* Reduced gap for smaller screens */
+    margin-top: 20px; /* Reduced margin-top */
 }
-.loginsignup-fields input{
-    height: 72px;
-    width: 100%;
-    padding-left: 20px;
-    border: 1px solid #c9c9c9;
-    outline: none;
-    color:#5c5c5c;
-    font-size: 18px;
+
+.loginsignup-fields input {
+    height: 60px; /* Reduced height */
+    padding-left: 15px; /* Reduced padding */
+    font-size: 16px; /* Reduced font size */
 }
-.loginsignup-container button{
-    width: 580px;
-    height:72px;
-    color:white;
+
+.loginsignup-container button {
+    width: 100%; /* Adjusted width */
+    height: 60px; /* Reduced height */
+    color: white;
     background: #ff4141;
-    margin-top: 30px;
+    margin-top: 20px; /* Reduced margin-top */
     border: none;
-    font-size: 24px;
+    font-size: 18px; /* Reduced font size */
     font-weight: 500;
     cursor: pointer;
 }
-.loginsignup-login{
-    margin-top: 20px;
+
+.loginsignup-login {
+    margin-top: 15px; /* Reduced margin-top */
     color: #5c5c5c;
-    font-size: 18px;
+    font-size: 16px; /* Reduced font size */
     font-weight: 500;
 }
-.loginsignup-login span{
-    color:#ff4141;
+
+.loginsignup-login span {
+    color: #ff4141;
     font-weight: 600;
 }
-.loginsignup-agree{
+
+.loginsignup-agree {
     display: flex;
     align-items: center;
-    margin-top:25px;
-    gap: 20px;
-    color:#5c5c5c;
-    font-size: 18px;
+    margin-top: 15px; /* Reduced margin-top */
+    gap: 10px; /* Reduced gap */
+    color: #5c5c5c;
+    font-size: 16px; /* Reduced font size */
     font-weight: 500;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (600px and down) */
+@media (max-width: 600px) {
+    .loginsignup-container {
+        padding: 15px; /* Further reduced padding */
+    }
+
+    .loginsignup-container h1 {
+        font-size: 24px; /* Further reduced font size */
+    }
+
+    .loginsignup-fields input {
+        height: 50px; /* Further reduced height */
+        font-size: 14px; /* Further reduced font size */
+    }
+
+    .loginsignup-container button {
+        height: 50px; /* Further reduced height */
+        font-size: 16px; /* Further reduced font size */
+    }
+
+    .loginsignup-login {
+        font-size: 14px; /* Further reduced font size */
+    }
+
+    .loginsignup-agree {
+        font-size: 14px; /* Further reduced font size */
+    }
+}
+
+/* Medium devices (600px to 992px) */
+@media (min-width: 600px) and (max-width: 992px) {
+    .loginsignup-container {
+        width: 95%; /* Adjusted width */
+    }
+
+    .loginsignup-container h1 {
+        font-size: 26px; /* Adjusted font size */
+    }
+
+    .loginsignup-fields input {
+        height: 55px; /* Adjusted height */
+        font-size: 15px; /* Adjusted font size */
+    }
+
+    .loginsignup-container button {
+        height: 55px; /* Adjusted height */
+        font-size: 18px; /* Adjusted font size */
+    }
+
+    .loginsignup-login {
+        font-size: 16px; /* Adjusted font size */
+    }
+
+    .loginsignup-agree {
+        font-size: 16px; /* Adjusted font size */
+    }
 }

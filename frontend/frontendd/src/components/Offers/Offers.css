@@ -12,14 +12,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 5vw;
 }
 .offers-left h1{
-    color:#171717;
+    color:rgb(98, 96, 96);
     font-size: 80px;
     font-weight: 600;
 }
 .offers-left p{
-    color:#171717;
+    color:#9083a0;
     font-size: 22px;
     font-weight: 600;
 
@@ -28,9 +29,10 @@
     width:282px;
     height:70px;
     border-radius: 35px;
-    background: #ff4141;
+    background: rgb(228, 91, 91);
     border: none;
     color: white;
+    padding: 1vw;
     font-size: 22px;
     font-weight: 500;
     margin-top: 30px;
@@ -43,4 +45,5 @@
     align-items: center;
     justify-content: center;
     padding-top: 50px;
+    margin-left: 5vw;
 }

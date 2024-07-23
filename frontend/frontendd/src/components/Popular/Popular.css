@@ -1,23 +1,80 @@
-.popular{
+/* Base Styles */
+.popular {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:10px;
-    height: 90vh;
+    background-color: rgb(238, 235, 235);
+    gap: 20px; /* Increased gap for better spacing */
+    padding: 0 20px; /* Added padding for smaller screens */
+    margin-bottom: 6vw;
 }
-.popular h1{
-    color:#171717;
-    font-size: 50px;
+
+.popular h1 {
+    color: rgb(86, 81, 81);
+    font-size: 40px; /* Adjusted size for better fit on various screens */
     font-weight: 600;
+    margin-top: 2vw;
+    text-align: center; /* Center-align text */
 }
-.popular hr{
-    width:200px;
-    height:6px;
+
+.popular hr {
+    width: 250px; /* Adjusted width for better fit */
+    height: 3px; /* Adjusted height */
     border-radius: 10px;
     background: #252525;
 }
-.popular-item{
-    margin-top: 50px;
-    display: flex;
-    gap:30px;
+
+.popular-item {
+    margin-top: 30px; /* Reduced top margin */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 30px; /* Adjusted gap */
+    width: 100%;
+    /* background-color: silver; */
+    margin-left: 25vw; 
+    /* Ensures container takes full width */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (600px and down) */
+@media (max-width: 600px) {
+    .popular {
+        padding: 0 10px; /* Further reduced padding */
+    }
+
+    .popular h1 {
+        font-size: 30px; /* Further reduced font size */
+    }
+
+    .popular hr {
+        width: 100px; /* Further reduced width */
+        height: 3px; /* Further reduced height */
+    }
+
+    .popular-item {
+        margin-top: 20px; /* Further reduced top margin */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted grid columns */
+    }
+}
+
+/* Medium devices (600px to 992px) */
+@media (min-width: 600px) and (max-width: 992px) {
+    .popular {
+        padding: 0 15px; /* Adjusted padding */
+    }
+
+    .popular h1 {
+        font-size: 35px; /* Adjusted size for medium screens */
+    }
+
+    .popular hr {
+        width: 120px; /* Adjusted width */
+        height: 4px; /* Adjusted height */
+    }
+
+    .popular-item {
+        margin-top: 25px; /* Adjusted top margin */
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjusted grid columns */
+    }
 }

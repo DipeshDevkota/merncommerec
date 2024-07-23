@@ -1,0 +1,66 @@
+/* Base Styles */
+.relatedproducts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Increased gap for better spacing */
+    padding: 0 20px; /* Added padding for smaller screens */
+    height: auto; /* Adjusted height for flexibility */
+}
+
+.relatedproducts h1 {
+    color: #171717;
+    font-size: 40px; /* Adjusted font size */
+    font-weight: 600;
+    text-align: center; /* Center aligned for consistency */
+}
+
+.relatedproducts hr {
+    width: 150px; /* Adjusted width for smaller screens */
+    height: 4px; /* Reduced height */
+    border-radius: 5px; /* Adjusted border-radius */
+    background: #252525;
+}
+
+.relatedproducts-item {
+    margin-top: 20px; /* Reduced margin-top */
+    display: flex;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    gap: 20px; /* Adjusted gap */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Small devices (600px and down) */
+@media (max-width: 600px) {
+    .relatedproducts h1 {
+        font-size: 30px; /* Further reduced font size */
+    }
+
+    .relatedproducts hr {
+        width: 100px; /* Further reduced width */
+    }
+
+    .relatedproducts-item {
+        gap: 15px; /* Reduced gap for smaller screens */
+        flex-direction: column; /* Stack items vertically on very small screens */
+        align-items: center; /* Center items horizontally */
+    }
+}
+
+/* Medium devices (600px to 992px) */
+@media (min-width: 600px) and (max-width: 992px) {
+    .relatedproducts h1 {
+        font-size: 35px; /* Adjusted font size */
+    }
+
+    .relatedproducts hr {
+        width: 120px; /* Adjusted width */
+    }
+
+    .relatedproducts-item {
+        gap: 20px; /* Adjusted gap */
+        flex-direction: row; /* Keep items in a row */
+    }
+}
