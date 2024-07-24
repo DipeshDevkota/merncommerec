@@ -54,6 +54,7 @@
   color: white;
   font-size: 22px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 /* Ensure hero-right flexbox alignment */
